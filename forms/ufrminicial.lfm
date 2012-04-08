@@ -1,0 +1,107 @@
+object frmInicial: TfrmInicial
+  Left = 628
+  Height = 383
+  Top = 171
+  Width = 608
+  Caption = 'frmInicial'
+  ClientHeight = 363
+  ClientWidth = 608
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.30'
+  object Button1: TButton
+    Left = 40
+    Height = 25
+    Top = 8
+    Width = 88
+    Caption = 'frmfodastico'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 184
+    Height = 25
+    Top = 8
+    Width = 88
+    Caption = 'frmbasedados'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 184
+    Height = 25
+    Top = 56
+    Width = 88
+    Caption = 'frmideogramas'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Left = 40
+    Height = 25
+    Top = 80
+    Width = 88
+    Caption = 'interface teste'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+  object Button5: TButton
+    Left = 40
+    Height = 25
+    Top = 104
+    Width = 88
+    Caption = 'treeview'
+    OnClick = Button5Click
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 239
+    Height = 21
+    Top = 216
+    Width = 15
+    Caption = '|'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Name = 'Courier'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    object mnuMenu: TMenuItem
+      Caption = 'Menu'
+      object mniArvore: TMenuItem
+        Caption = 'New Item2'
+      end
+    end
+  end
+  object SynPythonSyn1: TSynPythonSyn
+    DefaultFilter = 'Arquivos Python (*.py)|*.py'
+    Enabled = False
+    CommentAttri.FrameEdges = sfeAround
+    IdentifierAttri.FrameEdges = sfeAround
+    KeyAttri.FrameEdges = sfeAround
+    NonKeyAttri.FrameEdges = sfeAround
+    SystemAttri.FrameEdges = sfeAround
+    NumberAttri.FrameEdges = sfeAround
+    HexAttri.FrameEdges = sfeAround
+    OctalAttri.FrameEdges = sfeAround
+    FloatAttri.FrameEdges = sfeAround
+    SpaceAttri.FrameEdges = sfeAround
+    StringAttri.FrameEdges = sfeAround
+    DocStringAttri.FrameEdges = sfeAround
+    SymbolAttri.FrameEdges = sfeAround
+    ErrorAttri.FrameEdges = sfeAround
+    left = 304
+    top = 108
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 2
+    OnTimer = Timer1Timer
+    left = 336
+  end
+end
