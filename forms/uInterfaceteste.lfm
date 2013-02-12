@@ -1,4 +1,4 @@
-object frmTeste: TfrmTeste
+inherited frmTeste: TfrmTeste
   Left = 344
   Height = 608
   Top = 30
@@ -313,153 +313,169 @@ object frmTeste: TfrmTeste
   }
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '0.9.30'
-  object Panel1: TPanel
-    Left = 0
-    Height = 456
-    Top = 0
+  inherited pnlRaizTdi: TPanel
+    Height = 588
     Width = 820
-    Align = alClient
-    ClientHeight = 456
+    ClientHeight = 588
     ClientWidth = 820
-    TabOrder = 0
-    object Panel2: TPanel
+    inherited pnlControles: TPanel
+      Width = 818
+      ClientWidth = 818
+      inherited btnSeparar: TSpeedButton
+        Left = 756
+      end
+      inherited btnclose: TSpeedButton
+        Left = 786
+      end
+    end
+    object Panel5: TPanel[1]
       Left = 1
-      Height = 454
-      Top = 1
-      Width = 367
-      Align = alLeft
-      Anchors = [akTop, akLeft, akRight, akBottom]
-      ClientHeight = 454
-      ClientWidth = 367
-      TabOrder = 0
-      object TreeView1: TTreeView
+      Height = 112
+      Top = 475
+      Width = 818
+      Align = alBottom
+      ClientHeight = 112
+      ClientWidth = 818
+      TabOrder = 1
+      object Button1: TButton
         Left = 1
-        Height = 452
+        Height = 25
+        Top = 1
+        Width = 75
+        Caption = 'Button1'
+        OnClick = Button1Click
+        TabOrder = 0
+      end
+      object grd1: TStringGrid
+        Left = 1
+        Height = 81
+        Top = 30
+        Width = 816
+        Align = alBottom
+        ColCount = 100
+        DefaultColWidth = 85
+        FixedCols = 0
+        FixedRows = 0
+        RowCount = 10000
+        TabOrder = 1
+      end
+      object btnLefrase: TButton
+        Left = 104
+        Height = 25
+        Top = 1
+        Width = 75
+        Caption = 'btnLefrase'
+        OnClick = btnLefraseClick
+        TabOrder = 2
+      end
+      object edtFrase: TEdit
+        Left = 192
+        Height = 23
+        Top = 3
+        Width = 512
+        TabOrder = 3
+      end
+    end
+    object Panel1: TPanel[2]
+      Left = 1
+      Height = 452
+      Top = 23
+      Width = 818
+      Align = alClient
+      ClientHeight = 452
+      ClientWidth = 818
+      TabOrder = 2
+      object Panel2: TPanel
+        Left = 1
+        Height = 450
         Top = 1
         Width = 365
-        Align = alClient
-        DefaultItemHeight = 17
-        DragMode = dmAutomatic
-        HideSelection = False
-        Images = ImageList1
-        Indent = 20
-        PopupMenu = PopupMenu2
+        Align = alLeft
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        ClientHeight = 450
+        ClientWidth = 365
         TabOrder = 0
-        OnDragDrop = TreeView1DragDrop
-        OnDragOver = TreeView1DragOver
-        OnEdited = TreeView1Edited
-        OnEditingEnd = TreeView1EditingEnd
-        OnEnter = TreeView1Enter
-        OnKeyDown = TreeView1KeyDown
-        Options = [tvoAutoInsertMark, tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+        object TreeView1: TTreeView
+          Left = 1
+          Height = 448
+          Top = 1
+          Width = 363
+          Align = alClient
+          DefaultItemHeight = 17
+          DragMode = dmAutomatic
+          HideSelection = False
+          Images = ImageList1
+          Indent = 20
+          PopupMenu = PopupMenu2
+          TabOrder = 0
+          OnDragDrop = TreeView1DragDrop
+          OnDragOver = TreeView1DragOver
+          OnEdited = TreeView1Edited
+          OnEditingEnd = TreeView1EditingEnd
+          OnEnter = TreeView1Enter
+          OnKeyDown = TreeView1KeyDown
+          Options = [tvoAutoInsertMark, tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+        end
       end
-    end
-    object Splitter1: TSplitter
-      Left = 368
-      Height = 454
-      Top = 1
-      Width = 2
-    end
-    object Panel3: TPanel
-      Left = 567
-      Height = 454
-      Top = 1
-      Width = 252
-      Align = alRight
-      ClientHeight = 454
-      ClientWidth = 252
-      TabOrder = 2
-      object Memo1: TMemo
-        Left = 1
-        Height = 452
+      object Splitter1: TSplitter
+        Left = 366
+        Height = 450
         Top = 1
-        Width = 250
-        Align = alClient
-        ScrollBars = ssAutoVertical
-        TabOrder = 0
+        Width = 2
       end
-    end
-    object Panel4: TPanel
-      Left = 370
-      Height = 454
-      Top = 1
-      Width = 196
-      Align = alClient
-      ClientHeight = 454
-      ClientWidth = 196
-      TabOrder = 3
-      object TreeView2: TTreeView
-        Left = 1
-        Height = 452
+      object Panel3: TPanel
+        Left = 565
+        Height = 450
         Top = 1
-        Width = 194
-        Align = alClient
-        DefaultItemHeight = 17
-        DragMode = dmAutomatic
-        TabOrder = 0
-        OnDragDrop = TreeView2DragDrop
-        OnDragOver = TreeView2DragOver
-        Options = [tvoAutoInsertMark, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+        Width = 252
+        Align = alRight
+        ClientHeight = 450
+        ClientWidth = 252
+        TabOrder = 2
+        object Memo1: TMemo
+          Left = 1
+          Height = 448
+          Top = 1
+          Width = 250
+          Align = alClient
+          ScrollBars = ssAutoVertical
+          TabOrder = 0
+        end
       end
-    end
-    object Splitter2: TSplitter
-      Left = 566
-      Height = 454
-      Top = 1
-      Width = 1
-      Align = alRight
-      ResizeAnchor = akRight
+      object Panel4: TPanel
+        Left = 368
+        Height = 450
+        Top = 1
+        Width = 196
+        Align = alClient
+        ClientHeight = 450
+        ClientWidth = 196
+        TabOrder = 3
+        object TreeView2: TTreeView
+          Left = 1
+          Height = 448
+          Top = 1
+          Width = 194
+          Align = alClient
+          DefaultItemHeight = 17
+          DragMode = dmAutomatic
+          TabOrder = 0
+          OnDragDrop = TreeView2DragDrop
+          OnDragOver = TreeView2DragOver
+          Options = [tvoAutoInsertMark, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+        end
+      end
+      object Splitter2: TSplitter
+        Left = 564
+        Height = 450
+        Top = 1
+        Width = 1
+        Align = alRight
+        ResizeAnchor = akRight
+      end
     end
   end
-  object Panel5: TPanel
-    Left = 0
-    Height = 132
-    Top = 456
-    Width = 820
-    Align = alBottom
-    ClientHeight = 132
-    ClientWidth = 820
-    TabOrder = 1
-    object Button1: TButton
-      Left = 1
-      Height = 25
-      Top = 1
-      Width = 75
-      Caption = 'Button1'
-      OnClick = Button1Click
-      TabOrder = 0
-    end
-    object grd1: TStringGrid
-      Left = 8
-      Height = 57
-      Top = 32
-      Width = 704
-      ColCount = 100
-      DefaultColWidth = 85
-      FixedCols = 0
-      FixedRows = 0
-      RowCount = 10000
-      TabOrder = 1
-    end
-    object btnLefrase: TButton
-      Left = 104
-      Height = 25
-      Top = 1
-      Width = 75
-      Caption = 'btnLefrase'
-      OnClick = btnLefraseClick
-      TabOrder = 2
-    end
-    object edtFrase: TEdit
-      Left = 192
-      Height = 23
-      Top = 3
-      Width = 512
-      TabOrder = 3
-    end
-  end
-  object MainMenu1: TMainMenu
+  object MainMenu1: TMainMenu[2]
     left = 24
     top = 32
     object MenuItem1: TMenuItem
@@ -546,14 +562,14 @@ object frmTeste: TfrmTeste
       end
     end
   end
-  object OpenDialog1: TOpenDialog
+  object OpenDialog1: TOpenDialog[3]
     Title = 'escolhe um e abre duma vez '
     Filter = '.xml|*.xml|.txt|*.txt|*.*|*'
     FilterIndex = 2
     left = 368
     top = 32
   end
-  object PopupMenu1: TPopupMenu
+  object PopupMenu1: TPopupMenu[4]
     left = 104
     top = 32
     object mnumover: TMenuItem
@@ -674,13 +690,14 @@ object frmTeste: TfrmTeste
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF006360F80AFFFFFF00FFFFFF00FFFFFF00
       }
+      OnClick = mnucancelarClick
     end
   end
-  object SaveDialog1: TSaveDialog
+  object SaveDialog1: TSaveDialog[5]
     left = 440
     top = 32
   end
-  object ImageList1: TImageList
+  object ImageList1: TImageList[6]
     left = 280
     top = 32
     Bitmap = {
@@ -847,7 +864,7 @@ object frmTeste: TfrmTeste
       FF00FFFFFF00FFFFFF00FFFFFF00
     }
   end
-  object PopupMenu2: TPopupMenu
+  object PopupMenu2: TPopupMenu[7]
     left = 176
     top = 32
     object mniAddNO: TMenuItem
@@ -1048,6 +1065,7 @@ object frmTeste: TfrmTeste
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF006360F80AFFFFFF00FFFFFF00FFFFFF00
       }
+      OnClick = MenuItem2Click
     end
   end
 end

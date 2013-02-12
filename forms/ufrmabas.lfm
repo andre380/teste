@@ -1,0 +1,101 @@
+object frmAbas: TfrmAbas
+  Left = 261
+  Height = 600
+  Top = 61
+  Width = 800
+  Caption = 'frm abas'
+  ClientHeight = 580
+  ClientWidth = 800
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 800
+  Menu = menuprincipal
+  OnShow = FormShow
+  LCLVersion = '0.9.30'
+  object abasPrincipal: TPageControl
+    Left = 0
+    Height = 556
+    Top = 24
+    Width = 800
+    ActivePage = abaFixa
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    OnMouseUp = abasPrincipalMouseUp
+    object abaFixa: TTabSheet
+      Caption = 'abaFixa'
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 800
+    Align = alTop
+    ClientHeight = 24
+    ClientWidth = 800
+    TabOrder = 1
+    object SpeedButton1: TSpeedButton
+      Left = 0
+      Height = 22
+      Hint = 'clientes'
+      Top = 0
+      Width = 23
+      NumGlyphs = 0
+      OnClick = MenuItem2Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object menuprincipal: TMainMenu
+    left = 648
+    object nenu: TMenuItem
+      Caption = 'menu'
+      object MenuItem3: TMenuItem
+        Caption = 'New Item3'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem1: TMenuItem
+        Caption = 'form consulta'
+        OnClick = MenuItem1Click
+      end
+      object MenuItem2: TMenuItem
+        Caption = 'New Item4'
+        OnClick = MenuItem2Click
+      end
+      object BACA: TMenuItem
+        Caption = 'BACA'
+        OnClick = BACAClick
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'primeiros prototipos'
+      object mniInterface1: TMenuItem
+        Caption = 'interface1'
+        OnClick = mniInterface1Click
+      end
+      object mniInterfaceteste: TMenuItem
+        Caption = 'InterfaceTeste'
+        OnClick = mniInterfacetesteClick
+      end
+    end
+  end
+  object popAbas: TPopupMenu
+    left = 576
+    object mniFecharaba: TMenuItem
+      Caption = 'Fechar aba'
+      OnClick = mniFecharabaClick
+    end
+    object mniSepararAba: TMenuItem
+      Caption = 'Separar aba'
+      OnClick = mniSepararAbaClick
+    end
+  end
+  object aclInicial: TActionList
+    left = 610
+    top = 75
+    object acPegaPainelDoForm: TAction
+      Caption = 'acPegaPainelDoForm'
+      OnExecute = acPegaPainelDoFormExecute
+    end
+  end
+end

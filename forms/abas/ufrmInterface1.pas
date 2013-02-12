@@ -1,89 +1,82 @@
-unit uInterfaceteste;
+unit ufrmInterface1;
 
 {$mode objfpc}{$H+}
 
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  Menus, ExtCtrls, PairSplitter, StdCtrls, Buttons, ActnList, ComCtrls,
-  ButtonPanel, PopupNotifier, EditBtn, Spin, Grids, XMLRead, XMLWrite, xmlutils,
+  //Windows,
+  LCLIntf,
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  Buttons, ActnList, ComCtrls, StdCtrls, Grids, Menus, ufrmBaseTdi,
+  XMLRead, XMLWrite, xmlutils,
   XMLPropStorage,{Ipfilebroker,} xmltestreport, dom,
   uacessorios, Uclassificador, Uarrays, aux_interface, Uarquivotxt, Ucoisa,
-  Uideograma, Uarquivos, Upensamento, eventlog, ufrmBaseTdi,
+  Uideograma, Uarquivos, Upensamento, eventlog,
 
-  LCLType, Messages, Variants;//   Mask;
+  LCLType, Messages, Variants;
 
 type
 
-  { TfrmTeste }
+  { TfrmInterface1 }
 
-  TfrmTeste = class(TfrmBaseTdi)
+  TfrmInterface1 = class(TfrmBaseTdi)
+    acabrir: TAction;
     btnLefrase: TButton;
     Button1: TButton;
     edtFrase: TEdit;
     grd1: TStringGrid;
     ImageList1: TImageList;
-    MainMenu1: TMainMenu;
     Memo1: TMemo;
-    MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
-    mniAtualizar: TMenuItem;
-    mniAddtexto: TMenuItem;
     mniAddNO: TMenuItem;
+    mniAddtexto: TMenuItem;
+    mniAtualizar: TMenuItem;
+    mnucancelar: TMenuItem;
     mnucopiar: TMenuItem;
     mnumover: TMenuItem;
-    mnucancelar: TMenuItem;
-    mnuabrir: TMenuItem;
-    mnusalvar: TMenuItem;
     OpenDialog1: TOpenDialog;
-    Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
+    Panel6: TPanel;
+    pnlcorpo: TPanel;
     PopupMenu1: TPopupMenu;
     PopupMenu2: TPopupMenu;
     SaveDialog1: TSaveDialog;
+    btnabrir: TSpeedButton;
+    btnsalvar: TSpeedButton;
     Splitter1: TSplitter;
     Splitter2: TSplitter;
     TreeView1: TTreeView;
     TreeView2: TTreeView;
+    procedure btnabrirClick(Sender: TObject);
     procedure btnLefraseClick(Sender: TObject);
+    procedure btnsalvarClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure EventLog1GetCustomCategory(Sender: TObject; var Code: Word);
-    procedure FormCreate(Sender: TObject); //create#####
-    procedure MenuItem2Click(Sender: TObject);
-    procedure mniAbrirClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure mniAddNOClick(Sender: TObject);
     procedure mniAddtextoClick(Sender: TObject);
     procedure mniAtualizarClick(Sender: TObject);
-    procedure mnucancelarClick(Sender: TObject);
     procedure mnucopiarClick(Sender: TObject);
     procedure mnumoverClick(Sender: TObject);
-    procedure mnusalvarClick(Sender: TObject);
     procedure TreeView1DragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure TreeView1DragOver(Sender, Source: TObject; X, Y: Integer;
       State: TDragState; var Accept: Boolean);
     procedure TreeView1Edited(Sender: TObject; Node: TTreeNode; var S: string);
-    procedure TreeView1EditingEnd(Sender: TObject; Node: TTreeNode;
-      Cancel: Boolean);
     procedure TreeView1Enter(Sender: TObject);
     procedure TreeView1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure TreeView2DragDrop(Sender, Source: TObject; X, Y: Integer);
-    procedure TreeView2DragOver(Sender, Source: TObject; X, Y: Integer;
-      State: TDragState; var Accept: Boolean);
   private
-    procedure exemploscomDOMnode;
     { private declarations }
   public
     { public declarations }
-  end;
+  end; 
 
 var
-  frmTeste: TfrmTeste;
-  docxml,docxml2:TXMLDocument;
+  frmInterface1: TfrmInterface1;
+    docxml,docxml2:TXMLDocument;
   xmlideogr,xmlideogr2: TxmlIdeogramas;
   xmltarefa,xmltarefa2:TxmlTarefas;
   domtools:Tdomtools;
@@ -98,10 +91,13 @@ var
     arr500:Tarray500;
     arquivotxt: TextFile;
 
-
 implementation
 
-procedure TfrmTeste.mniAbrirClick(Sender: TObject);
+{$R *.lfm}
+
+{ TfrmInterface1 }
+
+procedure TfrmInterface1.btnabrirClick(Sender: TObject);
 var
   texto: String;
   int1: LongInt;
@@ -132,94 +128,56 @@ begin
   //begin
   //  memo1.Lines.Add(IntToStr(cont)+' '+ stl1.Strings[cont]);
   end;
-
-
-
-
-end;
-procedure TfrmTeste.mniAddNOClick(Sender: TObject);
-var novoNO,nodestino:TDOMNode;
-  str1: String;
-begin
-  if docxml= nil then
-  begin
-    docxml:=domtools.criaObjetoXML('raiz');
-  end;
-  nodestino:= nil;
-  nodestino:=domtools.getNOdestino(TreeView1,docxml);
-  if nodestino=docxml.FirstChild then
-  begin
-    novoNO:=docxml.CreateElement('novoNO');
-    nodestino.AppendChild(novono);
-    domtools.XML2Tree(TreeView1,docxml);
-  end else
-  begin
-    novoNO:=docxml.CreateElement('novoNO');
-    str1:= TreeView1.InsertMarkNode.Text;
-    if TreeView1.InsertMarkType = tvimAsFirstChild then begin
-      IF nodestino.HasChildNodes then begin
-      nodestino:=nodestino.FirstChild;
-      domtools.insereAntes(nil,nodestino,novono);
-
-      TreeView1.Items.AddChildFirst(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
-      end else begin
-      nodestino.AppendChild(novono);
-      TreeView1.Items.AddChild(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
-      end;
-    end;
-    if TreeView1.InsertMarkType = tvimAsNextSibling then begin
-      domtools.insereDepois(nil,nodestino,novono);
-      TreeView1.Items.InsertBehind(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
-    end;
-    if TreeView1.InsertMarkType = tvimAsPrevSibling then begin
-      domtools.insereAntes(nil,nodestino,novono);
-      TreeView1.Items.Insert(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
-    end;
-  end;
-end;
-procedure TfrmTeste.mniAddtextoClick(Sender: TObject);
-var novoNO,notexto,nodestino:TDOMNode;
-begin
-nodestino:= nil;
-nodestino:=domtools.getNOdestino(TreeView1,docxml);
-  novoNO:=docxml.CreateElement('baba');
-  novoNO.TextContent:='novo texto';
-  notexto:=novoNO.FirstChild;
-   if TreeView1.InsertMarkType = tvimAsFirstChild then begin
-   IF nodestino.HasChildNodes then begin
-   nodestino:=nodestino.FirstChild;
-   domtools.insereAntes(nil,nodestino,notexto);
-   TreeView1.Items.AddChildFirst(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
-   end else begin
-   nodestino.AppendChild(notexto);
-   TreeView1.Items.AddChild(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
-   end;
- end;
- if TreeView1.InsertMarkType = tvimAsNextSibling then begin
-   domtools.insereDepois(nil,nodestino,notexto);
-   TreeView1.Items.InsertBehind(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
- end;
- if TreeView1.InsertMarkType = tvimAsPrevSibling then begin
-   domtools.insereAntes(nil,nodestino,notexto);
-   TreeView1.Items.Insert(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
- end;
- novoNO.Destroy;
-end;
-procedure TfrmTeste.mniAtualizarClick(Sender: TObject);
-begin
-  TreeView1.Items.Clear;
-    TreeView1.Visible:=false;
-    domtools.XML2Tree(TreeView1,docxml);
-    TreeView1.Visible:=true;
 end;
 
-procedure TfrmTeste.mnucancelarClick(Sender: TObject);
-begin
-
-end;
-
-procedure TfrmTeste.FormCreate(Sender: TObject);
+procedure TfrmInterface1.btnLefraseClick(Sender: TObject);
 var
+  matriz: Tmatriz500x20;
+  cont: Integer;
+  cont2: Integer;
+begin
+ // arrumatexto(texto:Ttxt;tamanho:integer);
+  classificador.entrafrase(edtfrase.Text);
+  matriz:=classificador.matriz;
+   for cont := 0 to 10 do
+   begin
+     for cont2:= 0 to 15 do
+     begin
+       grd1.Cells[cont,cont2]:=matriz.coluna[cont,cont2];
+     end;
+
+   end;
+end;
+
+procedure TfrmInterface1.btnsalvarClick(Sender: TObject);
+begin
+  SaveDialog1.Execute;
+  if docxml<>nil then
+    writeXMLFile(docxml,SaveDialog1.FileName);
+end;
+
+procedure TfrmInterface1.Button1Click(Sender: TObject);
+var
+  cont: Integer;
+begin
+  //if pensamento=nil then
+  //pensamento:=Tpensamento.Create;
+  if docxml= nil then
+    begin
+      docxml:=domtools.criaObjetoXML('raiz');
+    end;
+     classificador.classificaEmArvore(TStringList(memo1.Lines),docxml.DocumentElement);
+
+// classificador.classificaEmArvore(TStringList(Memo1.Lines),);
+  //xmltarefa2:=TxmlTarefas.create;
+  //xmltarefa2.lista:=pensamento.filaAtual;
+  //xmltarefa2.NomeArquivo:='C:\Users\Daiane\Desktop\tarefasbase.xml';
+ //for cont:=0 to 10 do
+ // pensamento.ciclo;
+end;
+
+procedure TfrmInterface1.FormCreate(Sender: TObject);
+  var
   str1:string ;
   cont: Integer;
   cont2: Integer;
@@ -293,57 +251,85 @@ begin
   //arquivotxt:= Tarquivotxt.Create;
 end;
 
-procedure TfrmTeste.MenuItem2Click(Sender: TObject);
+procedure TfrmInterface1.mniAddNOClick(Sender: TObject);
+var novoNO,nodestino:TDOMNode;
+  str1: String;
 begin
-
-end;
-
-procedure TfrmTeste.Button1Click(Sender: TObject);
-var
-  cont: Integer;
-
-begin
-  //if pensamento=nil then
-  //pensamento:=Tpensamento.Create;
   if docxml= nil then
-    begin
-      docxml:=domtools.criaObjetoXML('raiz');
+  begin
+    docxml:=domtools.criaObjetoXML('raiz');
+  end;
+  nodestino:= nil;
+  nodestino:=domtools.getNOdestino(TreeView1,docxml);
+  if nodestino=docxml.FirstChild then
+  begin
+    novoNO:=docxml.CreateElement('novoNO');
+    nodestino.AppendChild(novono);
+    domtools.XML2Tree(TreeView1,docxml);
+  end else
+  begin
+    novoNO:=docxml.CreateElement('novoNO');
+    str1:= TreeView1.InsertMarkNode.Text;
+    if TreeView1.InsertMarkType = tvimAsFirstChild then begin
+      IF nodestino.HasChildNodes then begin
+      nodestino:=nodestino.FirstChild;
+      domtools.insereAntes(nil,nodestino,novono);
+
+      TreeView1.Items.AddChildFirst(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
+      end else begin
+      nodestino.AppendChild(novono);
+      TreeView1.Items.AddChild(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
+      end;
     end;
-     classificador.classificaEmArvore(TStringList(memo1.Lines),docxml.DocumentElement);
-
-// classificador.classificaEmArvore(TStringList(Memo1.Lines),);
-  //xmltarefa2:=TxmlTarefas.create;
-  //xmltarefa2.lista:=pensamento.filaAtual;
-  //xmltarefa2.NomeArquivo:='C:\Users\Daiane\Desktop\tarefasbase.xml';
- //for cont:=0 to 10 do
- // pensamento.ciclo;
+    if TreeView1.InsertMarkType = tvimAsNextSibling then begin
+      domtools.insereDepois(nil,nodestino,novono);
+      TreeView1.Items.InsertBehind(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
+    end;
+    if TreeView1.InsertMarkType = tvimAsPrevSibling then begin
+      domtools.insereAntes(nil,nodestino,novono);
+      TreeView1.Items.Insert(TreeView1.InsertMarkNode,'novoNO').ImageIndex:=1;
+    end;
+  end;
 end;
 
-procedure TfrmTeste.EventLog1GetCustomCategory(Sender: TObject; var Code: Word);
+procedure TfrmInterface1.mniAddtextoClick(Sender: TObject);
+var novoNO,notexto,nodestino:TDOMNode;
 begin
-
-end;
-
-procedure TfrmTeste.btnLefraseClick(Sender: TObject);
-var
-  matriz: Tmatriz500x20;
-  cont: Integer;
-  cont2: Integer;
-begin
- // arrumatexto(texto:Ttxt;tamanho:integer);
-  classificador.entrafrase(edtfrase.Text);
-  matriz:=classificador.matriz;
-   for cont := 0 to 10 do
-   begin
-     for cont2:= 0 to 15 do
-     begin
-       grd1.Cells[cont,cont2]:=matriz.coluna[cont,cont2];
-     end;
-
+nodestino:= nil;
+nodestino:=domtools.getNOdestino(TreeView1,docxml);
+  novoNO:=docxml.CreateElement('baba');
+  novoNO.TextContent:='novo texto';
+  notexto:=novoNO.FirstChild;
+   if TreeView1.InsertMarkType = tvimAsFirstChild then begin
+   IF nodestino.HasChildNodes then begin
+   nodestino:=nodestino.FirstChild;
+   domtools.insereAntes(nil,nodestino,notexto);
+   TreeView1.Items.AddChildFirst(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
+   end else begin
+   nodestino.AppendChild(notexto);
+   TreeView1.Items.AddChild(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
    end;
+ end;
+ if TreeView1.InsertMarkType = tvimAsNextSibling then begin
+   domtools.insereDepois(nil,nodestino,notexto);
+   TreeView1.Items.InsertBehind(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
+ end;
+ if TreeView1.InsertMarkType = tvimAsPrevSibling then begin
+   domtools.insereAntes(nil,nodestino,notexto);
+   TreeView1.Items.Insert(TreeView1.InsertMarkNode,'novoTexto').ImageIndex:=2;
+ end;
+ novoNO.Destroy;
 end;
 
-procedure TfrmTeste.mnucopiarClick(Sender: TObject);
+procedure TfrmInterface1.mniAtualizarClick(Sender: TObject);
+begin
+  TreeView1.Items.Clear;
+    TreeView1.Visible:=false;
+    domtools.XML2Tree(TreeView1,docxml);
+    TreeView1.Visible:=true;
+end;
+
+procedure TfrmInterface1.mnucopiarClick(Sender: TObject);
 var novono,nodestino:TDOMNode;
  novonotree:TTreeNode;
  notreedestino: TTreeNode;
@@ -385,7 +371,8 @@ begin
     TreeView1.Visible:=true;
  end;
 end;
-procedure TfrmTeste.mnumoverClick(Sender: TObject);
+
+procedure TfrmInterface1.mnumoverClick(Sender: TObject);
 var novono,nodestino,apagado:TDOMNode;
   novonotree: TTreeNode;
 begin
@@ -428,24 +415,24 @@ begin
 
   end;
 end;
-procedure TfrmTeste.mnusalvarClick(Sender: TObject);
-begin
-   SaveDialog1.Execute;
-   if docxml<>nil then
-  writeXMLFile(docxml,SaveDialog1.FileName);
 
-end;
-procedure TfrmTeste.TreeView1DragDrop(Sender, Source: TObject; X, Y: Integer);
+procedure TfrmInterface1.TreeView1DragDrop(Sender, Source: TObject; X,
+  Y: Integer);
+var posicao:tpoint;
 begin
-         PopupMenu1.PopUp(x+frmTeste.Left,y+frmTeste.Top);
+  GetCursorPos(Posicao);
+  //PopupMenu1.PopUp(x+frmTeste.Left,y+frmTeste.Top);
+  PopupMenu1.PopUp(posicao.x,posicao.y);
 end;
-procedure TfrmTeste.TreeView1DragOver(Sender, Source: TObject; X, Y: Integer;
-  State: TDragState; var Accept: Boolean);
+
+procedure TfrmInterface1.TreeView1DragOver(Sender, Source: TObject; X,
+  Y: Integer; State: TDragState; var Accept: Boolean);
 begin
-  //saco....!
+  //se a procedure nao estiver atribuida o dragdrop nao funciona
 end;
-procedure TfrmTeste.TreeView1Edited(Sender: TObject; Node: TTreeNode; var S: string
-  );
+
+procedure TfrmInterface1.TreeView1Edited(Sender: TObject; Node: TTreeNode;
+  var S: string);
   var nodom:TDOMNode;
     str1: String;
     notext:TDOMText;
@@ -454,7 +441,7 @@ procedure TfrmTeste.TreeView1Edited(Sender: TObject; Node: TTreeNode; var S: str
 begin
   aberto:=TDOMElementio( domtools.getNOorigem(TreeView1,docxml));
   TreeView1.Update;
-  frmTeste.Update;
+  pnlRaizTdi.Update;
   str1:=s;
   str1:=TreeView1.Selected.GetTextPath;
   str1:=TreeView1.Selected.Text;
@@ -464,13 +451,7 @@ begin
   TreeView1Enter(sender);
 end;
 
-procedure TfrmTeste.TreeView1EditingEnd(Sender: TObject; Node: TTreeNode;
-  Cancel: Boolean);
-begin
-
-end;
-
-procedure TfrmTeste.TreeView1Enter(Sender: TObject);
+procedure TfrmInterface1.TreeView1Enter(Sender: TObject);
 var
   str1,sobraDoConteudo: String; stlAtributo,stlValor :TStringList; int2,int1:integer;
 begin
@@ -529,7 +510,8 @@ begin
     editado:=false;
   end;
 end;
-procedure TfrmTeste.TreeView1KeyDown(Sender: TObject; var Key: Word;
+
+procedure TfrmInterface1.TreeView1KeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 var
   nodel: TDOMNode;
@@ -547,36 +529,6 @@ begin
 
   end;
 end;
-procedure TfrmTeste.TreeView2DragDrop(Sender, Source: TObject; X, Y: Integer);
-begin
-             //sdfhgj
-end;
-procedure TfrmTeste.TreeView2DragOver(Sender, Source: TObject; X, Y: Integer;
-  State: TDragState; var Accept: Boolean);
-begin
-  //wefdbghjg
-end;
-procedure TfrmTeste.exemploscomDOMnode;
-var
- noraiz,nopai,nofilho,novono:TDOMNode;
- xdoc:TXMLDocument;//o xdoc é o que contem o domnode raiz(xdoc nao é o raiz )
-begin
-  ReadXMLFile(xdoc ,'arquivo.xml'); // instancía xdoc com o arquivo fornecido
-
-  xdoc := TXMLDocument.create;// cria uma instancia nova
-  noraiz := xdoc.CreateElement('cadastro');//cria um nó para raiz
-  Xdoc.Appendchild(noraiz); // cadastra o nó raiz (só pode ter um)
-  noraiz:= xdoc.DocumentElement; //atualiza o edereco do noraiz
-  nopai := xdoc.CreateElement('usuario'); //cria um nó pai (ou filho do raiz)
-  TDOMElement(nopai).SetAttribute('id', '001'); // cria um atributo para o nó pai
-  noraiz.Appendchild(nopai);                    // cadastra o nó pai
-  //so há duas maneiras de adicionar nós a arvore e precisa do nópai correspondente pra isso
-  nopai.AppendChild(novono);  //insere o novonó depois do ultimo nófilho
-  nopai.InsertBefore(novono,nofilho);//insere o novonó antes nófilho apresentado
-  writeXMLFile(xDoc,'teste.xml');//gera um arquivo
-end;
-initialization
-  {$I uInterfaceteste.lrs}
 
 end.
 

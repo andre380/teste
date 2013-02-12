@@ -5,6 +5,7 @@
     <PathDelim Value="\"/>
     <General>
       <MainUnit Value="0"/>
+      <AutoCreateForms Value="False"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
@@ -38,7 +39,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="21">
+    <Units Count="32">
       <Unit0>
         <Filename Value="pInterface.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -46,8 +47,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="30" Y="18"/>
-        <UsageCount Value="45"/>
+        <CursorPos X="45" Y="21"/>
+        <UsageCount Value="66"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -56,12 +57,11 @@
         <ComponentName Value="frmInicial"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmInicial"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="66"/>
-        <CursorPos X="3" Y="68"/>
-        <UsageCount Value="45"/>
+        <TopLine Value="31"/>
+        <CursorPos X="36" Y="61"/>
+        <UsageCount Value="66"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="123" ID="3"/>
         </Bookmarks>
@@ -75,12 +75,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uFodastico"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="205"/>
-        <CursorPos X="2" Y="239"/>
-        <UsageCount Value="44"/>
+        <TopLine Value="76"/>
+        <CursorPos X="3" Y="78"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="forms\ufrmbasedados.pas"/>
@@ -91,7 +92,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="47" Y="27"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="17"/>
       </Unit3>
       <Unit4>
         <Filename Value="forms\uInterfaceteste.pas"/>
@@ -100,12 +101,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uInterfaceteste"/>
-        <EditorIndex Value="12"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="530"/>
-        <CursorPos X="63" Y="542"/>
-        <UsageCount Value="44"/>
+        <TopLine Value="70"/>
+        <CursorPos X="11" Y="85"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="forms\ufrmIdeogramas.pas"/>
@@ -116,7 +119,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="4" Y="26"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="17"/>
       </Unit5>
       <Unit6>
         <Filename Value="forms\uTreeview.pas"/>
@@ -125,90 +128,74 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uTreeview"/>
-        <EditorIndex Value="13"/>
         <WindowIndex Value="0"/>
         <TopLine Value="384"/>
         <CursorPos X="3" Y="418"/>
-        <UsageCount Value="44"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="65"/>
       </Unit6>
       <Unit7>
         <Filename Value="units\ucoisa.pas"/>
         <UnitName Value="Ucoisa"/>
-        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="30" Y="23"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="20"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2269"/>
         <CursorPos X="1" Y="2288"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
       </Unit8>
       <Unit9>
         <Filename Value="units\upensamento.pas"/>
         <UnitName Value="Upensamento"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="35" Y="48"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
         <Bookmarks Count="2">
           <Item0 X="3" Y="73" ID="1"/>
           <Item1 X="3" Y="281" ID="2"/>
         </Bookmarks>
-        <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="units\utarefa.pas"/>
         <UnitName Value="Utarefa"/>
-        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="364"/>
         <CursorPos X="1" Y="389"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="20"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\objpas\classes\classesh.inc"/>
-        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="261"/>
         <CursorPos X="38" Y="286"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="20"/>
       </Unit11>
       <Unit12>
         <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\objpas\classes\lists.inc"/>
-        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
         <TopLine Value="633"/>
         <CursorPos X="13" Y="638"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="20"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\inc\objpash.inc"/>
-        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="184"/>
         <CursorPos X="26" Y="203"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="20"/>
       </Unit13>
       <Unit14>
         <Filename Value="units\uarquivos.pas"/>
         <UnitName Value="Uarquivos"/>
-        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="7"/>
         <CursorPos X="22" Y="18"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="19"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\components\codetools\linkscanner.pas"/>
@@ -216,7 +203,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="170"/>
         <CursorPos X="17" Y="179"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\lazarus\components\aggpas\src\agg_vertex_sequence.pas"/>
@@ -224,17 +211,15 @@
         <WindowIndex Value="0"/>
         <TopLine Value="37"/>
         <CursorPos X="2" Y="48"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
       </Unit16>
       <Unit17>
         <Filename Value="C:\lazarus\fpc\2.4.2\source\packages\fcl-base\src\contnrs.pp"/>
         <UnitName Value="contnrs"/>
-        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="14"/>
         <CursorPos X="32" Y="35"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="19"/>
       </Unit17>
       <Unit18>
         <Filename Value="C:\lazarus\lcl\customtimer.pas"/>
@@ -242,146 +227,258 @@
         <WindowIndex Value="0"/>
         <TopLine Value="141"/>
         <CursorPos X="1" Y="182"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
       </Unit18>
       <Unit19>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2677"/>
         <CursorPos X="1" Y="2711"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
       </Unit19>
       <Unit20>
         <Filename Value="units\Uintencidade.pas"/>
         <UnitName Value="Uintencidade"/>
-        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="17"/>
         <CursorPos X="27" Y="36"/>
+        <UsageCount Value="12"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="units\uFuncoes.pas"/>
+        <UnitName Value="uFuncoes"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="20" Y="99"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="ufrmInicial.pas"/>
+        <UnitName Value="ufrmInicial"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="8"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAbas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmabas"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="46" Y="11"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="forms\ufrmbasetdi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBaseTdi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmBaseTdi"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="28"/>
+        <CursorPos X="18" Y="69"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmInterface1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmInterface1"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="165"/>
+        <CursorPos X="15" Y="165"/>
+        <UsageCount Value="30"/>
+        <Bookmarks Count="2">
+          <Item0 X="30" Y="421" ID="1"/>
+          <Item1 X="16" Y="9" ID="2"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="units\uttabsheettdi.pas"/>
+        <UnitName Value="uttabsheettdi"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="22"/>
+        <CursorPos X="63" Y="48"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="1" Y="77"/>
+        <UsageCount Value="14"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\win\wininc\redef.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="470"/>
+        <CursorPos X="10" Y="492"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\lcl\include\winapih.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="102"/>
+        <CursorPos X="10" Y="124"/>
+        <UsageCount Value="13"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="units\uclassificador.pas"/>
+        <UnitName Value="Uclassificador"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="118"/>
+        <CursorPos X="1" Y="140"/>
         <UsageCount Value="13"/>
         <Loaded Value="True"/>
-      </Unit20>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus\lcl\include\progressbar.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="156"/>
+        <CursorPos X="1" Y="178"/>
+        <UsageCount Value="12"/>
+      </Unit31>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="71" Column="1" TopLine="42"/>
+        <Filename Value="forms\uInterfaceteste.pas"/>
+        <Caret Line="173" Column="5" TopLine="134"/>
       </Position1>
       <Position2>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="219" Column="5" TopLine="176"/>
       </Position2>
       <Position3>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="74" Column="1" TopLine="42"/>
+        <Filename Value="forms\uInterfaceteste.pas"/>
+        <Caret Line="201" Column="5" TopLine="174"/>
       </Position3>
       <Position4>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="76" Column="1" TopLine="42"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="249" Column="5" TopLine="217"/>
       </Position4>
       <Position5>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\uInterfaceteste.pas"/>
+        <Caret Line="209" Column="7" TopLine="203"/>
       </Position5>
       <Position6>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="76" Column="1" TopLine="42"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="252" Column="7" TopLine="246"/>
       </Position6>
       <Position7>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="350" Column="3" TopLine="347"/>
       </Position7>
       <Position8>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="76" Column="1" TopLine="42"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="344" Column="3" TopLine="341"/>
       </Position8>
       <Position9>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="78" Column="1" TopLine="42"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="343" Column="7" TopLine="322"/>
       </Position9>
       <Position10>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="347" Column="9" TopLine="323"/>
       </Position10>
       <Position11>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="349" Column="41" TopLine="323"/>
       </Position11>
       <Position12>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="78" Column="1" TopLine="42"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="368" Column="11" TopLine="346"/>
       </Position12>
       <Position13>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="458" Column="1" TopLine="415"/>
       </Position13>
       <Position14>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="368" Column="11" TopLine="346"/>
       </Position14>
       <Position15>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="78" Column="1" TopLine="42"/>
+        <Filename Value="forms\uInterfaceteste.pas"/>
+        <Caret Line="316" Column="37" TopLine="291"/>
       </Position15>
       <Position16>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="94" Column="1" TopLine="72"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="374" Column="11" TopLine="352"/>
       </Position16>
       <Position17>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="253" Column="7" TopLine="171"/>
       </Position17>
       <Position18>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="94" Column="1" TopLine="72"/>
+        <Filename Value="forms\abas\ufrmInterface1.pas"/>
+        <Caret Line="252" Column="5" TopLine="177"/>
       </Position18>
       <Position19>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmbasetdi.pas"/>
+        <Caret Line="33" Column="26" TopLine="25"/>
       </Position19>
       <Position20>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="94" Column="1" TopLine="72"/>
+        <Filename Value="forms\ufrmbasetdi.pas"/>
+        <Caret Line="49" Column="16" TopLine="26"/>
       </Position20>
       <Position21>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="units\uttabsheettdi.pas"/>
+        <Caret Line="54" Column="1" TopLine="22"/>
       </Position21>
       <Position22>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="units\uttabsheettdi.pas"/>
+        <Caret Line="34" Column="19" TopLine="11"/>
       </Position22>
       <Position23>
-        <Filename Value="units\upensamento.pas"/>
-        <Caret Line="94" Column="1" TopLine="72"/>
+        <Filename Value="forms\uInterfaceteste.pas"/>
+        <Caret Line="21" Column="32" TopLine="1"/>
       </Position23>
       <Position24>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="179" Column="29" TopLine="156"/>
       </Position24>
       <Position25>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="186" Column="29" TopLine="163"/>
       </Position25>
       <Position26>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="46" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="133" Column="1" TopLine="131"/>
       </Position26>
       <Position27>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="47" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="61" Column="25" TopLine="46"/>
       </Position27>
       <Position28>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="44" Column="1" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="225" Column="37" TopLine="196"/>
       </Position28>
       <Position29>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="45" Column="3" TopLine="15"/>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="134" Column="38" TopLine="103"/>
       </Position29>
       <Position30>
-        <Filename Value="units\ucoisa.pas"/>
-        <Caret Line="44" Column="1" TopLine="15"/>
+        <Filename Value="units\uFuncoes.pas"/>
+        <Caret Line="824" Column="10" TopLine="756"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -393,10 +490,13 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="forms;units"/>
+      <OtherUnitFiles Value="forms;units;forms\abas"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
@@ -411,7 +511,7 @@
     </Other>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="5">
+    <BreakPoints Count="6">
       <Item1>
         <Source Value="C:\lazarus\fpc\2.4.2\source\rtl\objpas\classes\lists.inc"/>
         <Line Value="615"/>
@@ -432,6 +532,10 @@
         <Source Value="units\ucoisa.pas"/>
         <Line Value="45"/>
       </Item5>
+      <Item6>
+        <Source Value="forms\abas\ufrmInterface1.pas"/>
+        <Line Value="425"/>
+      </Item6>
     </BreakPoints>
     <Exceptions Count="3">
       <Item1>
