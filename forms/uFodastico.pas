@@ -8,17 +8,19 @@ uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   StdCtrls, ExtCtrls, Buttons, ShellCtrls, ComCtrls,
 
-  XMLRead, XMLWrite, xmlutils, XMLPropStorage, Menus, xmltestreport, dom,
-  uacessorios, Uclassificador, Uarrays, aux_interface, Uarquivotxt, Ucoisa,
-  Uideograma, Uarquivos, Upensamento, eventlog, types;
+  XMLRead, XMLWrite, xmlutils, XMLPropStorage, Menus, ActnList, xmltestreport,
+  dom, uacessorios, Uclassificador, Uarrays, aux_interface, Uarquivotxt, Ucoisa,
+  Uideograma, Uarquivos, Upensamento, eventlog, types,
+
+  ufrmBaseTdi;
 
 type
 
   { TfrmFodastico }
 
-  TfrmFodastico = class(TForm)
-    btnAbrirtexto: TBitBtn;
+  TfrmFodastico = class(TfrmBaseTdi)
     btnAbrirProcessado: TBitBtn;
+    btnAbrirtexto: TBitBtn;
     cbxprocura: TComboBox;
     Edit1: TEdit;
     Label1: TLabel;

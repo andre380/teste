@@ -77,6 +77,18 @@ object frmAbas: TfrmAbas
         Caption = 'InterfaceTeste'
         OnClick = mniInterfacetesteClick
       end
+      object mniFormFodastico: TMenuItem
+        Caption = 'frmFodastico(tcc)'
+        OnClick = mniFormFodasticoClick
+      end
+      object mniFrmInicial: TMenuItem
+        Caption = 'frminicial'
+        OnClick = mniFrmInicialClick
+      end
+      object mniFrmtreeview: TMenuItem
+        Caption = 'frmTreeView'
+        OnClick = mniFrmtreeviewClick
+      end
     end
   end
   object popAbas: TPopupMenu

@@ -13,13 +13,14 @@ uses
   LCLType, Messages, Variants,
   XMLRead, XMLWrite, xmlutils,XMLPropStorage,xmltestreport, dom,
   uacessorios, Uclassificador, Uarrays, aux_interface, Uarquivotxt, Ucoisa,
-  Uideograma, Uarquivos, Upensamento;
+  Uideograma, Uarquivos, Upensamento,
+  ufrmBaseTdi;
 
 type
 
   { Tfrmtreeview }
 
-  Tfrmtreeview = class(TForm)
+  Tfrmtreeview = class(TfrmBaseTdi)
     ComboBox1: TComboBox;
     Edit1: TEdit;
     ImageList1: TImageList;
@@ -39,12 +40,12 @@ type
     PopupMenu1: TPopupMenu;
     PopupMenu2: TPopupMenu;
     SaveDialog1: TSaveDialog;
-    Splitter1: TSplitter;
     ini: TSynIniSyn;
-    SynMemo1: TSynMemo;
+    Splitter1: TSplitter;
     pascal: TSynPasSyn;
     php: TSynPHPSyn;
     sql: TSynSQLSyn;
+    SynMemo1: TSynMemo;
     TreeView1: TTreeView;
     procedure ComboBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);

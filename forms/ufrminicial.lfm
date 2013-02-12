@@ -1,7 +1,7 @@
-object frmInicial: TfrmInicial
-  Left = 628
+inherited frmInicial: TfrmInicial
+  Left = 634
   Height = 383
-  Top = 171
+  Top = 63
   Width = 608
   Caption = 'frmInicial'
   ClientHeight = 363
@@ -9,53 +9,68 @@ object frmInicial: TfrmInicial
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '0.9.30'
-  object Button1: TButton
-    Left = 40
-    Height = 25
-    Top = 8
-    Width = 88
-    Caption = 'frmfodastico'
-    OnClick = Button1Click
-    TabOrder = 0
+  inherited pnlRaizTdi: TPanel
+    Height = 363
+    Width = 608
+    ClientHeight = 363
+    ClientWidth = 608
+    inherited pnlControles: TPanel
+      Width = 606
+      ClientWidth = 606
+      inherited btnSeparar: TSpeedButton
+        Left = 544
+      end
+      inherited btnclose: TSpeedButton
+        Left = 574
+      end
+    end
+    object Button1: TButton[1]
+      Left = 40
+      Height = 25
+      Top = 46
+      Width = 88
+      Caption = 'frmfodastico'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Button2: TButton[2]
+      Left = 184
+      Height = 25
+      Top = 46
+      Width = 88
+      Caption = 'frmbasedados'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object Button3: TButton[3]
+      Left = 184
+      Height = 25
+      Top = 94
+      Width = 88
+      Caption = 'frmideogramas'
+      OnClick = Button3Click
+      TabOrder = 3
+    end
+    object Button4: TButton[4]
+      Left = 40
+      Height = 25
+      Top = 118
+      Width = 88
+      Caption = 'interface teste'
+      OnClick = Button4Click
+      TabOrder = 4
+    end
+    object Button5: TButton[5]
+      Left = 40
+      Height = 25
+      Top = 142
+      Width = 88
+      Caption = 'treeview'
+      OnClick = Button5Click
+      TabOrder = 5
+    end
   end
-  object Button2: TButton
-    Left = 184
-    Height = 25
-    Top = 8
-    Width = 88
-    Caption = 'frmbasedados'
-    OnClick = Button2Click
-    TabOrder = 1
-  end
-  object Button3: TButton
-    Left = 184
-    Height = 25
-    Top = 56
-    Width = 88
-    Caption = 'frmideogramas'
-    OnClick = Button3Click
-    TabOrder = 2
-  end
-  object Button4: TButton
-    Left = 40
-    Height = 25
-    Top = 80
-    Width = 88
-    Caption = 'interface teste'
-    OnClick = Button4Click
-    TabOrder = 3
-  end
-  object Button5: TButton
-    Left = 40
-    Height = 25
-    Top = 104
-    Width = 88
-    Caption = 'treeview'
-    OnClick = Button5Click
-    TabOrder = 4
-  end
-  object Label1: TLabel
+  object Label1: TLabel[1]
     Left = 239
     Height = 21
     Top = 216
@@ -70,7 +85,9 @@ object frmInicial: TfrmInicial
     ParentColor = False
     ParentFont = False
   end
-  object MainMenu1: TMainMenu
+  inherited aclbaseTdi: TActionList[2]
+  end
+  object MainMenu1: TMainMenu[3]
     object mnuMenu: TMenuItem
       Caption = 'Menu'
       object mniArvore: TMenuItem
@@ -78,7 +95,7 @@ object frmInicial: TfrmInicial
       end
     end
   end
-  object SynPythonSyn1: TSynPythonSyn
+  object SynPythonSyn1: TSynPythonSyn[4]
     DefaultFilter = 'Arquivos Python (*.py)|*.py'
     Enabled = False
     CommentAttri.FrameEdges = sfeAround
@@ -98,7 +115,7 @@ object frmInicial: TfrmInicial
     left = 304
     top = 108
   end
-  object Timer1: TTimer
+  object Timer1: TTimer[5]
     Enabled = False
     Interval = 2
     OnTimer = Timer1Timer

@@ -6,10 +6,10 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  StdCtrls, ExtCtrls, SynHighlighterPython,
+  StdCtrls, ExtCtrls, Buttons, ActnList, SynHighlighterPython,
 
 
-
+  ufrmBaseTdi,
   uFodastico,uInterfaceteste,uTreeview,Ucoisa,Upensamento;
 
 
@@ -17,7 +17,7 @@ type
 
   { TfrmInicial }
 
-  TfrmInicial = class(TForm)
+  TfrmInicial = class(TfrmBaseTdi)
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;

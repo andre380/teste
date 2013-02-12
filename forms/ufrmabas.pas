@@ -10,6 +10,9 @@ uses
   LCLType,LCLIntf, ActnList,
   ufrmBaseTdi, uttabsheettdi,uInterfaceteste,
 
+  uTreeview,
+  ufrmInicial,
+  uFodastico,
   ufrmInterface1;
 
   //ufrmconsultaclientes,
@@ -27,6 +30,9 @@ type
     MenuItem2: TMenuItem;
     BACA: TMenuItem;
     MenuItem4: TMenuItem;
+    mniFrmtreeview: TMenuItem;
+    mniFrmInicial: TMenuItem;
+    mniFormFodastico: TMenuItem;
     mniInterfaceteste: TMenuItem;
     mniInterface1: TMenuItem;
     mniSepararAba: TMenuItem;
@@ -42,6 +48,9 @@ type
     procedure acPegaPainelDoFormExecute(Sender: TObject);
     procedure BACAClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure mniFormFodasticoClick(Sender: TObject);
+    procedure mniFrmInicialClick(Sender: TObject);
+    procedure mniFrmtreeviewClick(Sender: TObject);
     procedure mniInterfacetesteClick(Sender: TObject);
     procedure mniInterface1Click(Sender: TObject);
     procedure mniSepararAbaClick(Sender: TObject);
@@ -126,6 +135,21 @@ end;
 procedure TfrmAbas.btnExcluirClick(Sender: TObject);
 begin
 
+end;
+
+procedure TfrmAbas.mniFormFodasticoClick(Sender: TObject);
+begin
+  pegaNovoForm(frmFodastico,TfrmFodastico);
+end;
+
+procedure TfrmAbas.mniFrmInicialClick(Sender: TObject);
+begin
+  pegaNovoForm(frmInicial,TfrmInicial);
+end;
+
+procedure TfrmAbas.mniFrmtreeviewClick(Sender: TObject);
+begin
+  pegaNovoForm(frmtreeview,Tfrmtreeview);
 end;
 
 procedure TfrmAbas.mniInterfacetesteClick(Sender: TObject);
@@ -225,13 +249,10 @@ end;
 procedure TfrmAbas.pegaNovoForm(var aForm: TfrmBaseTdi;aClassForm:TFormClass);
 begin
   if (aForm = nil) or
-      (aForm.pnlRaizTdi = nil)then
-  begin
-     Application.CreateForm(aClassForm,aForm);
-     aForm.acModoAba.OnExecute:=acPegaPainelDoForm.OnExecute;
-  end;
-     aForm.acModoAba.OnExecute(aForm);
-
+     (aForm.pnlRaizTdi = nil)then
+    Application.CreateForm(aClassForm,aForm);
+  aForm.acModoAba.OnExecute:=acPegaPainelDoForm.OnExecute;
+  aForm.acModoAba.OnExecute(aForm);
 end;
 
 
