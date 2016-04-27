@@ -596,11 +596,11 @@ begin
     nosementes:=noTarefa.ChildNodes.Item[6];
 
 
-     tarefa.nome                := noNome.TextContent;
-    (tarefa.tipo)      := StrToInt(notipo.TextContent);
-    (tarefa.status)    := StrToInt(nostatus.TextContent);
-    (tarefa.categoria) := StrToInt(noCategoria.TextContent);
-    (tarefa.tamanho)   := StrToInt(notamanho.TextContent);
+    tarefa.nome      := noNome.TextContent;
+    tarefa.tipo      := StrToInt(notipo.TextContent);
+    tarefa.status    := StrToInt(nostatus.TextContent);
+    tarefa.categoria := StrToInt(noCategoria.TextContent);
+    tarefa.tamanho   := StrToInt(notamanho.TextContent);
 
 
 
@@ -610,10 +610,10 @@ begin
     notamanho:=noideograma.ChildNodes.Item[3];
     noSublista:=noideograma.ChildNodes.Item[4];
 
-    ideograma.ideia               := noNome.TextContent;
-    (ideograma.tipo)      := StrToInt(notipo.TextContent);
-    (ideograma.categoria) := StrToInt(noCategoria.TextContent);
-    (ideograma.tamanho)   := StrToInt(notamanho.TextContent);
+    ideograma.ideia     := noNome.TextContent;
+    ideograma.tipo      := StrToInt(notipo.TextContent);
+    ideograma.categoria := StrToInt(noCategoria.TextContent);
+    ideograma.tamanho   := StrToInt(notamanho.TextContent);
 
     for cont2:=1 to ideograma.tamanho do
     begin
@@ -638,10 +638,10 @@ begin
       tarefa.sementes[cont2].nome                := noNome.TextContent;
       tarefa.sementes[cont2].ideograma:= Tsementeideograma.Create;
       tarefa.sementes[cont2].ideograma.ideia     := noideograma.TextContent;
-      (tarefa.sementes[cont2].tipo)      := StrToInt(notipo.TextContent);
-      (tarefa.sementes[cont2].status)    := StrToInt(nostatus.TextContent);
-      (tarefa.sementes[cont2].categoria) := StrToInt(noCategoria.TextContent);
-      (tarefa.sementes[cont2].tamanho)   := StrToInt(notamanho.TextContent);
+      tarefa.sementes[cont2].tipo      := StrToInt(notipo.TextContent);
+      tarefa.sementes[cont2].status    := StrToInt(nostatus.TextContent);
+      tarefa.sementes[cont2].categoria := StrToInt(noCategoria.TextContent);
+      tarefa.sementes[cont2].tamanho   := StrToInt(notamanho.TextContent);
 
       for cont3:=1 to tarefa.sementes[cont2].tamanho do
       begin

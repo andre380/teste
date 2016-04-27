@@ -67,7 +67,7 @@ type
     procedure mniFecharabaClick(Sender: TObject);
     procedure abasPrincipalMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure pegaNovoForm(var aForm:TfrmBaseTdi;aClassForm:TFormClass);
+    procedure pegaNovoForm(out afrmBaseTdi;aClassForm:TFormClass);
     { private declarations }
   public
     { public declarations }
@@ -246,8 +246,10 @@ begin
   end;
 end;
 
-procedure TfrmAbas.pegaNovoForm(var aForm: TfrmBaseTdi;aClassForm:TFormClass);
+procedure TfrmAbas.pegaNovoForm(out afrmBaseTdi;aClassForm:TFormClass);
+var aform : TfrmBaseTdi;
 begin
+  aform:= TfrmBaseTdi(aFrmBaseTdi);
   if (aForm = nil) or
      (aForm.pnlRaizTdi = nil)then
     Application.CreateForm(aClassForm,aForm);

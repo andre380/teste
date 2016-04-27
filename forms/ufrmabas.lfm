@@ -10,7 +10,7 @@ object frmAbas: TfrmAbas
   Constraints.MinWidth = 800
   Menu = menuprincipal
   OnShow = FormShow
-  LCLVersion = '0.9.30'
+  LCLVersion = '1.0.8.0'
   object abasPrincipal: TPageControl
     Left = 0
     Height = 556

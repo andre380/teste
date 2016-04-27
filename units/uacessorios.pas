@@ -967,7 +967,7 @@ end;
 function TDOMElementio.GetAttributes: TDOMNamedNodeMap;
 begin
   if FAttributes=nil then
-    FAttributes := TDOMNamedNodeMap.Create(Self, ATTRIBUTE_NODE);
+    FAttributes := TDOMNamedNodeMap.Create(Self );//, ATTRIBUTE_NODE);
   Result := FAttributes;
 end;
 
