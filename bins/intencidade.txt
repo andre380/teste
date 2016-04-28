@@ -11,5 +11,4 @@ muito pouco
 pouco bastante 
 pouco muito 
 rapido devagar 
-rapido lento 
-inteiri
+rapido lento

@@ -1,5 +1,4 @@
-﻿
-inteiri dividido
+﻿inteiro dividido
 alto baixo
 ambicioso desambicioso 
 ambicioso desinteressado 
