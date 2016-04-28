@@ -38,12 +38,12 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="42">
+    <Units Count="43">
       <Unit0>
         <Filename Value="pInterface.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="37" Y="18"/>
-        <UsageCount Value="79"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -53,13 +53,15 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmInicial"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="76"/>
-        <CursorPos X="31" Y="97"/>
-        <UsageCount Value="79"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="100"/>
+        <CursorPos X="34" Y="106"/>
+        <UsageCount Value="82"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="122" ID="3"/>
         </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="forms\uFodastico.pas"/>
@@ -68,9 +70,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="9"/>
-        <CursorPos X="5" Y="28"/>
-        <UsageCount Value="78"/>
+        <TopLine Value="21"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="81"/>
       </Unit2>
       <Unit3>
         <Filename Value="forms\ufrmbasedados.pas"/>
@@ -88,7 +90,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="81"/>
       </Unit4>
       <Unit5>
         <Filename Value="forms\ufrmIdeogramas.pas"/>
@@ -107,38 +109,47 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="5" Y="29"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="81"/>
       </Unit6>
       <Unit7>
         <Filename Value="units\ucoisa.pas"/>
+        <IsPartOfProject Value="True"/>
         <UnitName Value="Ucoisa"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="34" Y="35"/>
-        <UsageCount Value="24"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="33"/>
+        <CursorPos X="20" Y="47"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
-        <TopLine Value="2269"/>
-        <CursorPos Y="2288"/>
-        <UsageCount Value="7"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3649"/>
+        <CursorPos Y="3668"/>
+        <UsageCount Value="10"/>
       </Unit8>
       <Unit9>
         <Filename Value="units\upensamento.pas"/>
+        <IsPartOfProject Value="True"/>
         <UnitName Value="Upensamento"/>
-        <TopLine Value="36"/>
-        <CursorPos X="35" Y="48"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="16"/>
+        <CursorPos X="13" Y="30"/>
+        <UsageCount Value="22"/>
         <Bookmarks Count="2">
-          <Item0 X="3" Y="73" ID="1"/>
-          <Item1 X="3" Y="281" ID="2"/>
+          <Item0 X="3" Y="75" ID="1"/>
+          <Item1 X="3" Y="285" ID="2"/>
         </Bookmarks>
+        <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="units\utarefa.pas"/>
         <UnitName Value="Utarefa"/>
-        <TopLine Value="364"/>
-        <CursorPos Y="389"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="60"/>
+        <CursorPos X="14" Y="77"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus\fpc\2.4.2\source\rtl\objpas\classes\classesh.inc"/>
@@ -221,12 +232,12 @@
         <ComponentName Value="frmAbas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="204"/>
-        <CursorPos X="3" Y="209"/>
-        <UsageCount Value="52"/>
+        <TopLine Value="198"/>
+        <CursorPos X="93" Y="232"/>
+        <UsageCount Value="55"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit23>
       <Unit24>
         <Filename Value="forms\ufrmbasetdi.pas"/>
@@ -238,7 +249,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos Y="66"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="55"/>
       </Unit24>
       <Unit25>
         <Filename Value="forms\abas\ufrmInterface1.pas"/>
@@ -249,7 +260,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
         <CursorPos X="5" Y="31"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="46"/>
         <Bookmarks Count="2">
           <Item0 X="30" Y="420" ID="1"/>
           <Item1 X="16" Y="9" ID="2"/>
@@ -372,8 +383,39 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit41>
+      <Unit42>
+        <Filename Value="units\ubasetarfa.pas"/>
+        <UnitName Value="Ubasetarfa"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="207"/>
+        <CursorPos X="4" Y="220"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit42>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="forms\ufrmabas.pas"/>
+        <Caret Line="232" Column="93" TopLine="198"/>
+      </Position1>
+      <Position2>
+        <Filename Value="units\ucoisa.pas"/>
+        <Caret Line="172" Column="5" TopLine="162"/>
+      </Position2>
+      <Position3>
+        <Filename Value="units\ucoisa.pas"/>
+        <Caret Line="47" Column="20" TopLine="33"/>
+      </Position3>
+      <Position4>
+        <Filename Value="units\upensamento.pas"/>
+        <Caret Line="100" Column="8" TopLine="81"/>
+      </Position4>
+      <Position5>
+        <Filename Value="units\upensamento.pas"/>
+        <Caret Line="30" Column="13" TopLine="16"/>
+      </Position5>
+    </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
@@ -398,7 +440,7 @@
     </Linking>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="10">
+    <BreakPoints Count="9">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsGlobal"/>
@@ -417,58 +459,51 @@
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsGlobal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="units\upensamento.pas"/>
-        <Line Value="116"/>
+        <Source Value="units\utarefa.pas"/>
+        <Line Value="434"/>
       </Item3>
       <Item4>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsGlobal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="units\utarefa.pas"/>
-        <Line Value="434"/>
-      </Item4>
-      <Item5>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsGlobal"/>
-        <WatchKind Value="wpkWrite"/>
         <Source Value="forms\ufrminicial.pas"/>
         <Line Value="124"/>
-      </Item5>
-      <Item6>
+      </Item4>
+      <Item5>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="units\uacessorios.pas"/>
         <Line Value="969"/>
+      </Item5>
+      <Item6>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="units\uclassificador.pas"/>
+        <Line Value="1190"/>
       </Item6>
       <Item7>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="units\uclassificador.pas"/>
-        <Line Value="1190"/>
+        <Line Value="141"/>
       </Item7>
       <Item8>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="units\uclassificador.pas"/>
-        <Line Value="141"/>
+        <Source Value="forms\abas\ufrmInterface1.pas"/>
+        <Line Value="138"/>
       </Item8>
       <Item9>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="forms\abas\ufrmInterface1.pas"/>
-        <Line Value="138"/>
-      </Item9>
-      <Item10>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
         <Source Value="units\uclassificador.pas"/>
         <Line Value="82"/>
-      </Item10>
+      </Item9>
     </BreakPoints>
     <Exceptions Count="3">
       <Item1>

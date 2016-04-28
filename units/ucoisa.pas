@@ -39,14 +39,14 @@ implementation
 
 procedure Tcoisa.Execute;
 begin // metodo chamado pela thread
-while status>0 do
-begin
-  if status>2 then
-  status:=status-1;
-  pensamento.ciclo;
-  if status=2 then Sleep(20);
-  if pensamento.filaAtual.Count>100 then status := 100;
-end;
+  while status>0 do
+  begin
+    if status>2 then
+    status:=status-1;
+    pensamento.ciclo;
+    if status=2 then Sleep(20);
+    if pensamento.filaAtual.Count>100 then status := 100;
+  end;
 end;
 
 procedure Tcoisa.busa;
@@ -189,6 +189,7 @@ destructor Tcoisa.Destroy;
 begin
   classificador.Destroy;
   montador.Destroy;
+  pensamento.Destroy;
   inherited Destroy;
 end;
 

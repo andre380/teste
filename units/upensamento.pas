@@ -53,7 +53,7 @@ implementation
 // soluçao para decidir
 //No caso do reforço associativo, um mapeamento entre ações(saidas) e estímulos(entrada) é produzido,
 //procurando maximizar o valor de desempenho do sistema de aprendizagem ou sinal de reforço.(retorno externo recompensa)
-//Como o aprendiz não sabe a ação que deve tomar, este deve testar quais ações produzem mais recompensa.
+//Como o aprendiz não sabe a ação que deve tomar, este deve testar quais ações produzem mais recompensa.  "lido de livros e internet" ...
 Procedure Tpensamento.ciclo;
 Var
   cont,cont2,cont3: Integer;
@@ -74,41 +74,43 @@ Begin
   if filaAtual.count>0 then
   begin
     if tarf= nil then
-	  int1:=int1+2; //debug
+	  int1:=int1+1; //debug
     if  (tarf.status > 4) then
     begin
-	   tarf.status := tarf.status+1;
-	   for cont:=1 to  tarf.tamanho do
-	   begin
-		  if (tarf.lista[cont].status=2) then begin tarf.status:=2;  break; end;
-		  if (tarf.lista[cont].status <> 1) and (tarf.lista[cont]<>tarf) then begin
-			  break;
-		  end;
-		  if cont = tarf.tamanho then //se chegou na ultima todas estao prontas
-		  begin
-		    tarf.status:= 1;
-		  end;
-
-	   end;
+      tarf.status := tarf.status+1;
+      for cont:=1 to  tarf.tamanho do
+      begin
+        if (tarf.lista[cont].status=2) then begin tarf.status:=2;  break; end;
+        if (tarf.lista[cont].status <> 1) and (tarf.lista[cont]<>tarf) then begin
+	        break;
+        end;
+        if cont = tarf.tamanho then //se chegou na ultima todas estao prontas
+        begin
+	  tarf.status:= 1;
+        end;
+      end;
     end;
     if  (tarf.status = 3)or(tarf.status = 4) then
     begin
-        if (tarf.status = 3)then begin
-        executaTarefa(tarf,caller);// ou faz a parte dela
-        end;
-        int1:=tarf.tamanho;
-		  if tarf.tamanho>0 then  //so p confirmar
-      for cont:=1 to  tarf.tamanho do
+      if (tarf.status = 3)then
       begin
-		  if (tarf.lista[cont].status=2) then begin tarf.status:=2;  break; end;//se uma filha falhou a mae falha tambem
-        if (tarf.lista[cont].status=3) then begin //poe a 1ª filha preparada na fila
-		      proxfila.Add(tarf.lista[cont],tarf);//debug
-          break;                                 //e para de procurar
-        end;
-        if (cont = tarf.tamanho)and(tarf.status>3)  then begin
-          tarf.status:=5;  //se chegar ate o fim todas as subtarefas fiseram sua parte
-        end;               //entao aguarda (5)
+        executaTarefa(tarf,caller);// ou faz a parte dela
       end;
+      int1:=tarf.tamanho;
+      if tarf.tamanho>0 then  //so p confirmar
+        for cont:=1 to  tarf.tamanho do
+        begin
+	  if (tarf.lista[cont].status=2) then begin tarf.status:=2;  break; end;//se uma filha falhou a mae falha tambem
+          if (tarf.lista[cont].status=3) then
+          begin //poe a 1ª filha preparada na fila
+	    proxfila.Add(tarf.lista[cont],tarf);//debug
+            break;  //e para de procurar
+          end;
+          if (cont = tarf.tamanho)and(tarf.status>3)  then
+          begin
+            tarf.status:=5;  //se chegar ate o fim todas as subtarefas fiseram sua parte
+          end;               //entao aguarda (5)
+        end;
     end;
     itarefaAtual:=itarefaAtual+1;//vai p proxima na lista
   end else
