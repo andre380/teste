@@ -72,7 +72,7 @@ uses
     property nome:string read fnome write setnome ;
     property ideograma :Tideograma read Fideograma write setideograma;
     property tipo:integer read Ftipo write Settipo;
-    property status:integer read Fstatus write Setstatus ;
+    property status:integer read Fstatus write Setstatus ;// 1 concluida 2 falhada 3 preparada  4 parte feita executando 5,6... parte feita aguardando
     property categoria:integer read Fcategoria write Setcategoria ;
     property tamanho:integer read Ftamanho write Settamanho ;
     property arquivo:Rtarefa read Regout write Regin;
@@ -84,6 +84,7 @@ uses
     function casaSemente (smnt:Tsementetarefa):boolean;
     function constatarefa(tarefa:Ttarefa):boolean;
 
+    function arquiva:boolean;
     function comparaRtarefa(r1,R2:Rsementetarefa):boolean;
     constructor Create;
     destructor Destroy; override;
@@ -296,6 +297,11 @@ Begin
     end;
   end;
 End;
+
+function Ttarefa.arquiva: boolean;
+begin
+  //to-do
+end;
 
 Function Ttarefa.comparaRtarefa(r1, R2: Rsementetarefa): boolean;
 Begin

@@ -18,6 +18,7 @@ uses
   { Tpensamento }
 
   Tpensamento = class
+    tendencia:integer;// 1 consonante , 2 dissonante , 3 irrelevante
     reEntrada:TreEntrada;
     manipulaideogramas:Tmanipulaideogramas;
     arquivoTarefa:Tarquivotarefas;//local
@@ -41,6 +42,10 @@ uses
     function tarefaconhecida(tarf,caller:Ttarefa):Ttarefa;
     procedure identificaIdeia(str1:string);
     procedure trocafila;
+    procedure execDissonancia(tarf,caller:Ttarefa);
+    procedure execConsonancia(tarf,caller:Ttarefa);
+    function  herancaValida(herdeira,herdada:Ttarefa):boolean;
+    function  buscaconsonancia(tarf:Ttarefa; var consonancia:Ttarefa):Boolean;
 
     constructor Create;
     destructor Destroy; override;
@@ -294,6 +299,109 @@ begin
   filaAtual:=proxfila;
   proxfila:=swapfila;
   itarefaAtual:=0;
+end;
+
+procedure Tpensamento.execDissonancia(tarf, caller: Ttarefa);
+var consonancia,tarf1,tarf2,tarf3:Ttarefa; cont:integer;
+begin
+  if tendencia=1 then
+  begin // consonante
+    if buscaconsonancia(tarf,consonancia) then
+    begin
+      for cont:= 1 to consonancia.tamanho-1 do
+      proxfila.add(consonancia.lista[cont],tarf);
+    end
+    else
+    begin
+      tarf1:=Ttarefa.Create;
+      tarf1.nome:= tarf.nome;
+      tarf1.ideograma:=tarf.ideograma;
+      tarf1.tipo:=tarf.tipo;
+      tarf1.categoria:=2;
+      tarf1.addSubtarefa(basetarefa.tarefas[29]);//talvez
+      tarf1.addSubtarefa(tarf.lista[2]);//ideia opositora
+
+      tarf2:=Ttarefa.Create;
+      tarf2.nome:='consonancia_'+tarf.nome;
+      tarf2.ideograma:=basetarefa.tarefas[28].ideograma;
+      tarf2.tipo:=basetarefa.tarefas[28].tipo;
+      tarf2.categoria:=2;
+      tarf2.addSubtarefa(basetarefa.tarefas[28]);//relacao_consonancia
+      tarf2.addSubtarefa(tarf.lista[2]); //ideia opositora
+      tarf2.addSubtarefa(tarf1);         //talvez em relação a opositora
+
+      proxfila.add(tarf2,tarf);
+      proxfila.add(tarf1,tarf);
+    end;
+  end;
+  if tendencia=2 then
+  begin // dissonante
+    tarf.lista[2].status:=2;
+  end;
+  if tendencia=3 then
+  begin // irrelevante
+    tarf.lista[2].arquiva;
+    tarf.arquiva;
+    tarf.lista[2].free;
+    tarf.Free;
+  end;
+end;
+
+procedure Tpensamento.execConsonancia(tarf, caller: Ttarefa);
+var cont,cont2:integer; tarf1,tarf2:Ttarefa; talvez:boolean;
+begin
+  talvez:=true;
+  for cont := 1 to tarf.tamanho-1 do
+  begin
+    if (tarf<>nil) and talvez and herancaValida(tarf.lista[cont].lista[0], basetarefa.tarefas[28]) then// é uma sub tarefa diferente de talvez
+      talvez:=false;
+    if (tarf<>nil) and (tarf.lista[cont].status = 2) then
+    begin
+      tarf1:=Ttarefa.Create;
+      tarf1.nome:= tarf.nome;
+      tarf1.ideograma:=tarf.ideograma;
+      tarf1.tipo:=tarf.tipo;
+      tarf1.categoria:=tarf.categoria;
+      tarf1.addSubtarefa(tarf);
+      for cont2 := 1 to tarf.tamanho-1 do
+      begin
+        if cont2 <> cont then
+          tarf1.addSubtarefa(tarf.lista[cont2]);
+      end;
+      proxfila.add(tarf1);
+      tarf.arquiva;
+      tarf.Free;
+      Break;
+    end;
+  end;
+
+  if tarf<>nil then
+  begin
+    if tarf.tamanho < 3 then
+    begin
+      tarf.status:=2;
+      tarf.arquiva;
+      tarf.free;
+    end;
+    if talvez then
+    begin
+      tarf.arquiva;
+      tarf.free;
+    end;
+
+  end;
+end;
+
+function Tpensamento.herancaValida(herdeira, herdada: Ttarefa): boolean;
+begin
+
+end;
+
+function Tpensamento.buscaconsonancia(tarf: Ttarefa; var consonancia: Ttarefa
+  ): Boolean;
+begin
+  //se não achar
+  // procurar tambem consonancia com as tarefas herdadas e incluir a atual
 end;
 
 /// executa sua parte se possivel

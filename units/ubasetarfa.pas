@@ -228,6 +228,26 @@ begin
   tarefas[26].categoria:= 1;
   tarefas[26].ideograma:=ideogrbase[191] ;
 
+  tarefas[27]:= Ttarefa.Create;
+  tarefas[27].nome:='Relacao_dissonancia ';
+  tarefas[27].tipo:= 1;
+  tarefas[27].addSubtarefa(tarefas[27]);
+  tarefas[27].categoria:= 1;
+  tarefas[27].ideograma:=ideogrbase[181] ;
+
+  tarefas[28]:= Ttarefa.Create;
+  tarefas[28].nome:='relacao_consonancia ';
+  tarefas[28].tipo:= 1;
+  tarefas[28].addSubtarefa(tarefas[28]);
+  tarefas[28].categoria:= 1;
+  tarefas[28].ideograma:=ideogrbase[181] ;
+
+  tarefas[29]:= Ttarefa.Create;
+  tarefas[29].nome:='talvez_consonante ';
+  tarefas[29].tipo:= 1;
+  tarefas[29].addSubtarefa(tarefas[29]);
+  tarefas[29].categoria:= 1;
+  tarefas[29].ideograma:=ideogrbase[181] ;
 
 
 end;
